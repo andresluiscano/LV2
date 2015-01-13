@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1">
+  <asmv1:assemblyIdentity name="LIBRECEA.exe" version="1.0.0.0" publicKeyToken="49eaedc4fce1c27f" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="LIBRECEA" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="LIBRECEA.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="2.0.50727.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.VisualBasic.PowerPacks.Vs" version="9.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="MySql.Data" version="6.8.3.0" publicKeyToken="C5687FC88969C44D" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="System.Core" version="3.5.0.0" publicKeyToken="b77a5c561934e089" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="WindowsBase" version="3.0.0.0" publicKeyToken="31bf3856ad364e35" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AxInterop.AcroPDFLib.dll" size="8704">
+      <assemblyIdentity name="AxInterop.AcroPDFLib" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>9vj1yU8I7iD4rJ8be2E+QVOrDpM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.AcroPDFLib.dll" size="12800">
+      <assemblyIdentity name="Interop.AcroPDFLib" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>phFkYzLoUno9LUhRkTKzs89MZ1A=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LIBRECEA.exe" size="308224">
+      <assemblyIdentity name="LIBRECEA" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>LD0DnuQzmahG9chpbUTIMVI9CNQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+<publisherIdentity name="CN=WOLF\Administrador" issuerKeyHash="306a6b22296b39c9af46be221fae01bee0ef3483" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>QLedLAgymSsZ1zLOgngRUFv28RA=</DigestValue></Reference></SignedInfo><SignatureValue>HU65pzwcbNnrGCmZ6cqUyPaNo2mGENE/3Jl+9YMCx69DYUlgVWNqAMFRza/nQ1CX87J/8SE80ZlPLIH7dsqGdCpmb/ZcLfGF+I0f3N75jv5VxVjfFFJ7VH7H+XDr9/zHhGdFQEXSa4aoxrsS3jQl9l9nk3aPm374KuTpcFluWiI=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>sD2qfOyL1DOBnfYQPIXuEnmtf64MrrhcZg0mfbTHfvZ316IjkrAf1p/Lb6vlX6mC2orLmu7GgMe1/irMPsVMMW0t6yqpvcj99zJPnni2zwXgB/cKC2ZbzxRZg04GuiSdGqyADO3LGh7yfHzRSv3ak9P7IUSuiP4mtEQcPvAEjxc=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="10f1f65b50117882ce32d7192b9932082c9db740" Description="" Url=""><as:assemblyIdentity name="LIBRECEA.exe" version="1.0.0.0" publicKeyToken="49eaedc4fce1c27f" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=WOLF\Administrador</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>e/iSj0HTc6bEkkgJ0GnN4qgzP4A=</DigestValue></Reference></SignedInfo><SignatureValue>U52mCQaFJEvXwG71lOCvbVuyKmRHAOes6noL5R81V1WU74/7Ct7lyrM99ZXoBT3Scg0jMY8fYlcQrmuiv355xfNFQfHQLggVMQPHx5CQ5JPybAue4TEGq7iQggdh/BFLbfqzmzXBpWRf+dC+gt+byS0a75JjCmq1YooLMzfNmqo=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>sD2qfOyL1DOBnfYQPIXuEnmtf64MrrhcZg0mfbTHfvZ316IjkrAf1p/Lb6vlX6mC2orLmu7GgMe1/irMPsVMMW0t6yqpvcj99zJPnni2zwXgB/cKC2ZbzxRZg04GuiSdGqyADO3LGh7yfHzRSv3ak9P7IUSuiP4mtEQcPvAEjxc=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB2TCCAUagAwIBAgIQcNM3eUJDx6hB7YM/XIy/dzAJBgUrDgMCHQUAMC8xLTArBgNVBAMeJABXAE8ATABGAFwAQQBkAG0AaQBuAGkAcwB0AHIAYQBkAG8AcjAeFw0xNDA4MTQwMTA1MjVaFw0xNTA4MTQwNzA1MjVaMC8xLTArBgNVBAMeJABXAE8ATABGAFwAQQBkAG0AaQBuAGkAcwB0AHIAYQBkAG8AcjCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAsD2qfOyL1DOBnfYQPIXuEnmtf64MrrhcZg0mfbTHfvZ316IjkrAf1p/Lb6vlX6mC2orLmu7GgMe1/irMPsVMMW0t6yqpvcj99zJPnni2zwXgB/cKC2ZbzxRZg04GuiSdGqyADO3LGh7yfHzRSv3ak9P7IUSuiP4mtEQcPvAEjxcCAwEAATAJBgUrDgMCHQUAA4GBAGSQojS6xQ4LNszbE2BG8u+vDrrI+z0pAL2Wn+U3zoVdPWNgCK2AI7HSUxTTfBGaE2LXrtd3mnlNDgtBJdN0SKmcmaqf1FX6sgvrFu843qL+1GJw9EmKxCQBjnAdUrgPQPg5UO5+ZFA88ovySWoXw/wI/iMli5slzry3ZfmS9ElJ</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
