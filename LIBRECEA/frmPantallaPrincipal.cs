@@ -42,7 +42,7 @@ namespace LIBRECEA
 
         private void buscarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmBuscarClientes buscarCliente = new frmBuscarClientes();
+            frmFicha buscarCliente = new frmFicha();
             buscarCliente.Show();
         }
 

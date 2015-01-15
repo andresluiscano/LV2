@@ -11,8 +11,8 @@ namespace LIBRECEA
 {
     public partial class frmModificarClientes : Form
     {
-        public frmBuscarClientes buscarClientes = new frmBuscarClientes();
-        public frmModificarClientes(List<string> cliente, frmBuscarClientes formBuscar)
+        public frmFicha buscarClientes = new frmFicha();
+        public frmModificarClientes(List<string> cliente, frmFicha formBuscar)
         {
             InitializeComponent();
             txtNombre.Text = cliente[1].ToString();

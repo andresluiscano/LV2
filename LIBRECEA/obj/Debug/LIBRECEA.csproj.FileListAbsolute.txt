@@ -71,3 +71,29 @@ C:\Users\Administrador\Desktop\LIBRECEA 2.0 V10\LIBRECEA\LIBRECEA\obj\Debug\LIBR
 C:\Users\Administrador\Desktop\LIBRECEA 2.0 V10\LIBRECEA\LIBRECEA\obj\Debug\LIBRECEA.csproj.GenerateResource.Cache
 C:\Users\Administrador\Desktop\LIBRECEA 2.0 V10\LIBRECEA\LIBRECEA\obj\Debug\LIBRECEA.exe.manifest
 C:\Users\Administrador\Desktop\LIBRECEA 2.0 V10\LIBRECEA\LIBRECEA\obj\Debug\LIBRECEA.application
+C:\Users\Administrador\Desktop\LV2\LIBRECEA\obj\Debug\Interop.AcroPDFLib.dll
+C:\Users\Administrador\Desktop\LV2\LIBRECEA\obj\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\Administrador\Desktop\LV2\LIBRECEA\obj\Debug\LIBRECEA.csproj.ResolveComReference.cache
+C:\Users\Administrador\Desktop\LV2\LIBRECEA\obj\Debug\LIBRECEA.exe
+C:\Users\Administrador\Desktop\LV2\LIBRECEA\obj\Debug\LIBRECEA.pdb
+C:\Users\Administrador\Desktop\LV2\LIBRECEA\bin\Debug\LIBRECEA.exe.manifest
+C:\Users\Administrador\Desktop\LV2\LIBRECEA\bin\Debug\LIBRECEA.application
+C:\Users\Administrador\Desktop\LV2\LIBRECEA\bin\Debug\LIBRECEA.exe
+C:\Users\Administrador\Desktop\LV2\LIBRECEA\bin\Debug\LIBRECEA.pdb
+C:\Users\Administrador\Desktop\LV2\LIBRECEA\bin\Debug\Interop.AcroPDFLib.dll
+C:\Users\Administrador\Desktop\LV2\LIBRECEA\bin\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\Administrador\Desktop\LV2\LIBRECEA\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrador\Desktop\LV2\LIBRECEA\obj\Debug\LIBRECEA.fmrLogin.resources
+C:\Users\Administrador\Desktop\LV2\LIBRECEA\obj\Debug\LIBRECEA.frmAltaClientes.resources
+C:\Users\Administrador\Desktop\LV2\LIBRECEA\obj\Debug\LIBRECEA.frmDeuda.resources
+C:\Users\Administrador\Desktop\LV2\LIBRECEA\obj\Debug\LIBRECEA.frmEstado.resources
+C:\Users\Administrador\Desktop\LV2\LIBRECEA\obj\Debug\LIBRECEA.frmMenu.resources
+C:\Users\Administrador\Desktop\LV2\LIBRECEA\obj\Debug\LIBRECEA.frmModificarClientes.resources
+C:\Users\Administrador\Desktop\LV2\LIBRECEA\obj\Debug\LIBRECEA.frmPantallaPrincipal.resources
+C:\Users\Administrador\Desktop\LV2\LIBRECEA\obj\Debug\LIBRECEA.frmNuevoPedido.resources
+C:\Users\Administrador\Desktop\LV2\LIBRECEA\obj\Debug\LIBRECEA.Properties.Resources.resources
+C:\Users\Administrador\Desktop\LV2\LIBRECEA\obj\Debug\GenerateResource-ResGen.read.1.tlog
+C:\Users\Administrador\Desktop\LV2\LIBRECEA\obj\Debug\GenerateResource-ResGen.write.1.tlog
+C:\Users\Administrador\Desktop\LV2\LIBRECEA\obj\Debug\LIBRECEA.exe.manifest
+C:\Users\Administrador\Desktop\LV2\LIBRECEA\obj\Debug\LIBRECEA.application
+C:\Users\Administrador\Desktop\LV2\LIBRECEA\obj\Debug\LIBRECEA.frmFicha.resources

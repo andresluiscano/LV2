@@ -22,7 +22,7 @@ namespace LIBRECEA
 
         private void button2_Click(object sender, EventArgs e)
         {
-            frmBuscarClientes Ficha = new frmBuscarClientes();
+            frmFicha Ficha = new frmFicha();
             Ficha.Show();
         }
 

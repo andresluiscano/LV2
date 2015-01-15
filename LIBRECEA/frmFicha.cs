@@ -10,9 +10,9 @@ using MySql.Data.MySqlClient;
 
 namespace LIBRECEA
 {
-    public partial class frmBuscarClientes : Form
+    public partial class frmFicha : Form
     {
-        public frmBuscarClientes()
+        public frmFicha()
         {
             InitializeComponent();
             btnAceptar.Enabled =false;
@@ -139,8 +139,8 @@ namespace LIBRECEA
             dgvBuscar.DataSource = listaClientes;
 
                            
-                MySqlCommand consulta2 = new MySqlCommand(String.Format("SELECT (SELECT mat_nombre MATERIAL FROM material WHERE mat_id = D.deu_id_material) AS MATERIAL, D.deu_monto AS MONTO, D.deu_fec AS FECHA FROM deudas D WHERE deu_id_cli = (SELECT cli_id ID FROM clientes WHERE cli_nombre ='"+txtNombre.Text+ "' OR cli_apellido = '"+txtApellido.Text+"')"), conexion2);
-                MySqlDataReader ejecuta2 = consulta2.ExecuteReader();
+           /* MySqlCommand consulta2 = new MySqlCommand(String.Format("SELECT (SELECT mat_nombre MATERIAL FROM material WHERE mat_id = D.deu_id_material) AS MATERIAL, D.deu_monto AS MONTO, D.deu_fec AS FECHA FROM deudas D WHERE deu_id_cli = (SELECT cli_id ID FROM clientes WHERE cli_nombre ='"+txtNombre.Text+ "' OR cli_apellido = '"+txtApellido.Text+"')"), conexion2);
+            MySqlDataReader ejecuta2 = consulta2.ExecuteReader();
 
                 List<Deudas> deudas = new List<Deudas>();
                 while (ejecuta2.Read())
@@ -154,7 +154,7 @@ namespace LIBRECEA
                     deudas.Add(pDeudas);
                  }
                 dgvDeudas.DataSource = deudas;
-           
+           */
             ejecuta.Close();
             conexion.Close();
             conexion2.Close();
@@ -191,6 +191,12 @@ namespace LIBRECEA
         private void dgvDeudas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            frmAltaClientes altaCliente = new frmAltaClientes();
+            altaCliente.Show();
         } 
     }
 }
