@@ -159,6 +159,7 @@ namespace LIBRECEA
             conexion.Close();
             conexion2.Close();
             btnAceptar.Enabled = true;
+            btnModificar.Enabled = true;
             btnLimpiar.Enabled = true;
             btnBuscar.Enabled = false;
             txtApellido.Enabled = false;
@@ -197,6 +198,12 @@ namespace LIBRECEA
         {
             frmAltaClientes altaCliente = new frmAltaClientes();
             altaCliente.Show();
+        }
+
+        private void dgvBuscar_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            textBox2.Text = listaClientes[e.RowIndex].NOMBRE;
+            
         } 
     }
 }

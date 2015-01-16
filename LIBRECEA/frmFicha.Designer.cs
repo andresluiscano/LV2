@@ -48,6 +48,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscar)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -143,6 +144,7 @@
             this.dgvBuscar.Name = "dgvBuscar";
             this.dgvBuscar.Size = new System.Drawing.Size(320, 95);
             this.dgvBuscar.TabIndex = 18;
+            this.dgvBuscar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBuscar_CellClick);
             this.dgvBuscar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBuscar_CellContentClick);
             // 
             // btnModificar
@@ -173,13 +175,14 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnNuevo);
             this.groupBox2.Controls.Add(this.dgvBuscar);
             this.groupBox2.Controls.Add(this.btnAceptar);
             this.groupBox2.Controls.Add(this.btnModificar);
             this.groupBox2.Controls.Add(this.btnCancelar);
             this.groupBox2.Location = new System.Drawing.Point(215, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(427, 119);
+            this.groupBox2.Size = new System.Drawing.Size(570, 119);
             this.groupBox2.TabIndex = 21;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Resultados";
@@ -189,7 +192,7 @@
             this.groupBox3.Controls.Add(this.dgvDeudas);
             this.groupBox3.Location = new System.Drawing.Point(12, 137);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(271, 117);
+            this.groupBox3.Size = new System.Drawing.Size(630, 307);
             this.groupBox3.TabIndex = 22;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Ficha";
@@ -200,7 +203,7 @@
             this.dgvDeudas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDeudas.Location = new System.Drawing.Point(8, 19);
             this.dgvDeudas.Name = "dgvDeudas";
-            this.dgvDeudas.Size = new System.Drawing.Size(255, 86);
+            this.dgvDeudas.Size = new System.Drawing.Size(610, 272);
             this.dgvDeudas.TabIndex = 19;
             this.dgvDeudas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDeudas_CellContentClick);
             // 
@@ -220,7 +223,7 @@
             this.groupBox4.Controls.Add(this.button3);
             this.groupBox4.Controls.Add(this.button2);
             this.groupBox4.Controls.Add(this.button1);
-            this.groupBox4.Location = new System.Drawing.Point(301, 137);
+            this.groupBox4.Location = new System.Drawing.Point(648, 327);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(252, 117);
             this.groupBox4.TabIndex = 24;
@@ -258,7 +261,7 @@
             // btnNuevo
             // 
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.Location = new System.Drawing.Point(559, 137);
+            this.btnNuevo.Location = new System.Drawing.Point(433, 19);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(75, 23);
             this.btnNuevo.TabIndex = 25;
@@ -266,12 +269,19 @@
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(654, 138);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 25;
+            // 
             // frmFicha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(652, 280);
-            this.Controls.Add(this.btnNuevo);
+            this.ClientSize = new System.Drawing.Size(972, 477);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -291,6 +301,7 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -316,5 +327,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

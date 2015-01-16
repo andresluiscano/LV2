@@ -1,0 +1,13 @@
+SELECT
+C.cli_id,
+C.cli_nombre as NOMBRE,
+C.cli_apellido as APELLIDO,
+(SELECT mat_nombre MATERIAL FROM material WHERE mat_id = D.deu_id_material) AS MATERIAL,
+D.deu_monto AS MONTO,
+D.deu_fec AS FECHA
+FROM deudas D  join clientes C on D.deu_id_cli = C.cli_id
+where deu_id_cli = '31'
+order by deu_fec
+
+
+IP=192.168.0.6
