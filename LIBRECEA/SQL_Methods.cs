@@ -27,7 +27,7 @@ namespace LIBRECEA
             //                        "Trusted_Connection=no;" +
             //                        "database=" + "TP-ROCK" + ";" +
             //                        "connection timeout=5";
-            string ConectionQuery = "Server=localhost;User id=eric; Database=librecea; Password=eric";
+            string ConectionQuery = "Server=192.168.0.100;User id=eric; Database=librecea; Password=eric";
 
             myConnection = new MySqlConnection(ConectionQuery);
             try

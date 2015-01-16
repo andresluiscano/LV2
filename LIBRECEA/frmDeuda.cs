@@ -20,7 +20,7 @@ namespace LIBRECEA
         {
             InitializeComponent();
             clienteSeleccionado = cliente;
-            lblDatos.Text = cliente[2].ToString().ToUpper() + ", " + cliente[1].ToString().ToUpper();
+            lblDatos.Text = cliente[1].ToString().ToUpper() + ", "; cliente[2].ToString().ToUpper();
             
             //List<Materiales> listaMateriales = new List<Materiales>();
             MySqlConnection conexion = SQL_Methods.IniciarConnection();
@@ -104,6 +104,7 @@ namespace LIBRECEA
                 else
                 {
                     this.Close();
+                    
                 }
             }
             else

@@ -48,7 +48,7 @@ namespace LIBRECEA
             }
 
             frmDeuda deuda = new frmDeuda(colCliSelec);
-            btnAceptar.Enabled=false;
+            //btnAceptar.Enabled=false;
             deuda.Show();
             
             //this.Close();
@@ -83,7 +83,7 @@ namespace LIBRECEA
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -114,9 +114,7 @@ namespace LIBRECEA
         private void buscar()
         {
             MySqlConnection conexion = SQL_Methods.IniciarConnection();
-            MySqlConnection conexion2 = SQL_Methods.IniciarConnection();
-            dgvBuscar.Refresh();
-
+            
             MySqlCommand consulta = new MySqlCommand(String.Format(
            "SELECT cli_id AS ID, cli_nombre AS NOMBRE, cli_apellido AS APELLIDO FROM clientes  where cli_nombre ='{0}' or cli_apellido='{1}'", txtNombre.Text, txtApellido.Text), conexion);
             //MySqlCommand consulta = new MySqlCommand("SELECT cli_id,cli_nombre,cli_apellido FROM clientes WHERE cli_apellido='{}'" , conexion);
@@ -137,33 +135,8 @@ namespace LIBRECEA
 
             }
             dgvBuscar.DataSource = listaClientes;
-
-                           
-           /* MySqlCommand consulta2 = new MySqlCommand(String.Format("SELECT (SELECT mat_nombre MATERIAL FROM material WHERE mat_id = D.deu_id_material) AS MATERIAL, D.deu_monto AS MONTO, D.deu_fec AS FECHA FROM deudas D WHERE deu_id_cli = (SELECT cli_id ID FROM clientes WHERE cli_nombre ='"+txtNombre.Text+ "' OR cli_apellido = '"+txtApellido.Text+"')"), conexion2);
-            MySqlDataReader ejecuta2 = consulta2.ExecuteReader();
-
-                List<Deudas> deudas = new List<Deudas>();
-                while (ejecuta2.Read())
-                {
-                    
-                    Deudas pDeudas = new Deudas();
-                    pDeudas.id_material = ejecuta2.GetString(0);
-                    pDeudas.monto = ejecuta2.GetDouble(1);
-                    pDeudas.fec = ejecuta2.GetDateTime(2);
-
-                    deudas.Add(pDeudas);
-                 }
-                dgvDeudas.DataSource = deudas;
-           */
-            ejecuta.Close();
-            conexion.Close();
-            conexion2.Close();
-            btnAceptar.Enabled = true;
-            btnModificar.Enabled = true;
             btnLimpiar.Enabled = true;
-            btnBuscar.Enabled = false;
-            txtApellido.Enabled = false;
-            txtNombre.Enabled = false;
+                           
 
             if (listaClientes.Count == 0)
             {
@@ -173,13 +146,32 @@ namespace LIBRECEA
                 {
                     frmAltaClientes altaCliente = new frmAltaClientes();
                     altaCliente.Show();
-                    conexion.Close();
+                    btnAceptar.Enabled = true;
+                    btnModificar.Enabled = true;
+                    btnLimpiar.Enabled = true;
+                    btnBuscar.Enabled = false;
+                    txtApellido.Enabled = false;
+                    txtNombre.Enabled = false;
                 }
-               /* else if (result == DialogResult.No)
+               else
                 {
-                    this.Close();
+                    btnAceptar.Enabled = false;
+                    btnModificar.Enabled = false;
+                    btnBuscar.Enabled = true;
+                    btnLimpiar.Enabled = false;
+                    txtApellido.Enabled = true;
+                    txtNombre.Enabled = true;
+                    txtNombre.Text = "";
+                    txtApellido.Text = "";
+                    dgvBuscar.DataSource = "";
+                    listaClientes.Clear();
+                    this.txtNombre.Select();
 
-                }*/
+                }
+
+                ejecuta.Close();
+                conexion.Close();
+                this.Refresh();
             }
 
         }
@@ -202,8 +194,30 @@ namespace LIBRECEA
 
         private void dgvBuscar_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            textBox2.Text = listaClientes[e.RowIndex].NOMBRE;
-            
+            this.Refresh();
+            MySqlConnection conexion2 = SQL_Methods.IniciarConnection();
+            MySqlCommand consulta2 = new MySqlCommand(String.Format(
+                "SELECT (SELECT mat_nombre MATERIAL FROM material WHERE mat_id = D.deu_id_material) AS MATERIAL, D.deu_monto AS MONTO, D.deu_fec AS FECHA FROM deudas D  join clientes C on D.deu_id_cli = C.cli_id where deu_id_cli = '" + listaClientes[e.RowIndex].ID.ToString() + "' order by deu_fec"), conexion2);
+            MySqlDataReader ejecuta2 = consulta2.ExecuteReader();
+
+            List<Deudas> deudas = new List<Deudas>();
+             while (ejecuta2.Read())
+             {
+                    
+                 Deudas pDeudas = new Deudas();
+                 pDeudas.MATERIAL = ejecuta2.GetString(0);
+                 pDeudas.MONTO = ejecuta2.GetDouble(1);
+                 pDeudas.FECHA = ejecuta2.GetDateTime(2);
+
+                 deudas.Add(pDeudas);
+              }
+             dgvDeudas.DataSource = deudas;
+             conexion2.Close();
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            this.Close();
         } 
     }
 }

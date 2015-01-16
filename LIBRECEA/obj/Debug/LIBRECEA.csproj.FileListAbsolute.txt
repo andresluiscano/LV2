@@ -94,5 +94,6 @@ C:\Users\Administrador\Desktop\LV2\LIBRECEA\obj\Debug\LIBRECEA.Properties.Resour
 C:\Users\Administrador\Desktop\LV2\LIBRECEA\obj\Debug\LIBRECEA.exe.manifest
 C:\Users\Administrador\Desktop\LV2\LIBRECEA\obj\Debug\LIBRECEA.application
 C:\Users\Administrador\Desktop\LV2\LIBRECEA\obj\Debug\LIBRECEA.frmFicha.resources
-C:\Users\Administrador\Desktop\LV2\LIBRECEA\obj\Debug\LIBRECEA.csprojResolveAssemblyReference.cache
-C:\Users\Administrador\Desktop\LV2\LIBRECEA\obj\Debug\LIBRECEA.csproj.GenerateResource.Cache
+C:\Users\Administrador\Desktop\LV2\LIBRECEA\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrador\Desktop\LV2\LIBRECEA\obj\Debug\GenerateResource-ResGen.read.1.tlog
+C:\Users\Administrador\Desktop\LV2\LIBRECEA\obj\Debug\GenerateResource-ResGen.write.1.tlog
