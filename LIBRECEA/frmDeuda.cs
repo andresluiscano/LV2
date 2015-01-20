@@ -15,12 +15,14 @@ namespace LIBRECEA
     {
         public List<Materiales> listaMaterialesPorCliente = new List<Materiales>();
         public List<Materiales> listaMateriales = new List<Materiales>();
-        public List<string> clienteSeleccionado;
-        public frmDeuda(List<string> cliente)
+        public List<Cliente>clienteSeleccionado;
+        public int x=0;
+        public frmDeuda(List<Cliente> cliente, int N)
         {
             InitializeComponent();
+            x = N;
             clienteSeleccionado = cliente;
-            lblDatos.Text = cliente[1].ToString().ToUpper() + ", "; cliente[2].ToString().ToUpper();
+            lblDatos.Text = cliente[x].NOMBRE.ToString().ToUpper() + ", "+ cliente[x].APELLIDO.ToString().ToUpper();
             
             //List<Materiales> listaMateriales = new List<Materiales>();
             MySqlConnection conexion = SQL_Methods.IniciarConnection();
@@ -80,19 +82,21 @@ namespace LIBRECEA
         {
             if (this.txtCantidad.Text != "" && this.cboMateriales.Text != "")
             {
-                MySqlConnection conexion = SQL_Methods.IniciarConnection();
-                MySqlCommand comando = new MySqlCommand("insertarDeuda", conexion);
+                MySqlConnection conexion3 = SQL_Methods.IniciarConnection();
 
-                comando.CommandType = CommandType.StoredProcedure;
-                comando.Parameters.Add("id_deuda", MySqlDbType.Int16, 10).Value = Convert.ToInt32(clienteSeleccionado[0].ToString());
-                comando.Parameters.Add("id_material", MySqlDbType.Int16, 5).Value = Convert.ToInt32(listaMateriales[cboMateriales.SelectedIndex].Id.ToString());
-                comando.Parameters.Add("monto", MySqlDbType.Decimal, 10).Value = Convert.ToDouble(Convert.ToDecimal(listaMateriales[cboMateriales.SelectedIndex].precio) * Convert.ToInt16(txtCantidad.Text.ToString()));
-                comando.Parameters.Add("fec", MySqlDbType.Date, 10).Value = DateTime.Today;
+                string id_deuda, id_material, fec= "";
+                decimal monto = 0;
+                id_deuda = (clienteSeleccionado[0].ID.ToString());
+                id_material = listaMateriales[cboMateriales.SelectedIndex].Id.ToString();
+                fec = DateTime.Today.Year.ToString() + '-' + DateTime.Today.Month.ToString() + '-' + DateTime.Today.Day.ToString();
+                monto = (Convert.ToDecimal(listaMateriales[cboMateriales.SelectedIndex].precio)*Convert.ToInt16(txtCantidad.Text.ToString()));
 
-                MySqlDataReader dr = comando.ExecuteReader();
+                MySqlCommand consulta2 = new MySqlCommand(String.Format("CALL insertarDeuda(" + id_deuda + "," + id_material + "," + monto.ToString().Replace(',', '.') + ",'" + fec + "')"), conexion3);
 
-                conexion.Close();
+                MySqlDataReader ejecuta2 = consulta2.ExecuteReader();
 
+                conexion3.Close();
+               
                 DialogResult result = MessageBox.Show("Deuda agendada, desea seguir agregando deudas para " + lblDatos.Text, "Salir", MessageBoxButtons.YesNo);
 
                 if (result == DialogResult.Yes)
@@ -104,7 +108,6 @@ namespace LIBRECEA
                 else
                 {
                     this.Close();
-                    
                 }
             }
             else
